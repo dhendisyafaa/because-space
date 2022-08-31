@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+:root{
+    --neon: rgba(43, 255, 64, 1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    /* border: 1px solid red; */
+}
+
+body{
+    background-image: url(../photos/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+nav{
+    display: flex;
+    margin: 20px 0px;
+}
+
+nav .logo{
+    flex-grow: 1;
+}
+nav .logo p{
+    font-family: 'Playfair Display', serif !important;
+    color: var(--neon);
+    margin-left: 50px;
+    font-size: 36px;
+}
+
+nav .link-nav-wrapper{
+    display: flex;
+    flex-grow: 10;
+}
+
+nav .link-nav-wrapper .link-nav{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav .link-nav-wrapper .link-nav a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+/* main */
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
+
+main .content{
+    text-align: center;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .content h1{
+    font-family: 'Playfair Display', serif !important;
+    font-size: 96px;
+    color: var(--neon);
+}
+
+main .content p{
+    font-size: 18px;
+    color: rgba(230, 230, 230, 0.7);
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main .content button{
+    background-color: var(--neon);
+    padding: 5px 40px;
+    border-radius: 6px;
+    max-width: 200px;
+    margin: auto;
+    font-size: 16px;
+    border: none;
+    font-weight: 600;
+}
+
+/* card */
+
+main .card{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+main .card .card1, main .card .card2, main .card .card3{
+    width: 20%;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 8px;
+}
+
+main .card .card1 img, main .card .card2 img, main .card .card3 img{
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.card-body{
+    background-color: rgba(21, 21, 21, 0.6);
+    border-radius: 0px 0px 8px 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-body h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+.card-body p{
+    font-size: 8px;
+    font-weight: 300;
+}
+.card-body p.description{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.card-body h3, .card-body p{
+    color: white;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(21, 21, 21, 0.6);
+    padding: 20px 0px;
+    flex-wrap: wrap;
+}
+
+footer .badge{
+    display: flex;
+    align-items: center;
+    flex-grow: 3;
+}
+
+footer .badge p{
+    font-family: 'Playfair Display', serif !important;
+    color: var(--neon);
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+}
+
+footer .link-footer-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-grow: 5;
+}
+
+.link-footer-wrapper .link-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-footer-wrapper .link-footer .nav-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.link-footer-wrapper .link-footer p{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--neon);
+}
+
+.link-footer-wrapper .link-footer a{
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact form label{
+    color: white;
+    font-weight: 500;
+}
+
+.contact form textarea{
+    background: transparent;
+    border: 1px solid var(--neon);
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 6px;
+}
+.contact form button{
+    color: white;
+    background-color: transparent;
+    border: 1px solid var(--neon);
+    font-weight: 500;
+    max-width: 80px;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.contact form button:hover{
+    background-color: var(--neon);
+    color: black;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 600px) {
+    main .card{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    main .card .card1, main .card .card2, main .card .card3{
+        width: 100%;
+    }
+
+    footer{
+        gap: 50px;
+    }
+
+    footer .link-footer-wrapper{
+        flex-wrap: wrap;
+    }
+}
